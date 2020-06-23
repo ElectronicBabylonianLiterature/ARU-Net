@@ -7,9 +7,9 @@ from pix_lab.data_provider.data_provider_la import Data_provider_la
 from pix_lab.training.trainer import Trainer
 
 @click.command()
-@click.option('--path_list_train', default="......./lists/train.lst")
-@click.option('--path_list_val', default="......./lists/val.lst")
-@click.option('--output_folder', default="......./models/")
+@click.option('--path_list_train', default="/home/yunus/PycharmProjects/ARU-Net/train.lst")
+@click.option('--path_list_val', default="/home/yunus/PycharmProjects/ARU-Net/val.lst")
+@click.option('--output_folder', default="/home/yunus/PycharmProjects/ARU-Net/model_checkpoints")
 @click.option('--restore_path', default=None)
 def run(path_list_train, path_list_val, output_folder, restore_path):
     # Since the input images are of arbitrarily size, the autotune will significantly slow down training!
