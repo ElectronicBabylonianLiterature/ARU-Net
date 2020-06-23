@@ -66,7 +66,7 @@ class Trainer(object):
         val_size = data_provider.size_val
 
         session_conf = tf.ConfigProto()
-
+        #session_conf = tf.ConfigProto(device_count = {'GPU': 0})
         session_conf.gpu_options.allow_growth = True
         session_conf.gpu_options.visible_device_list = gpu_device
         #session_conf.gpu_options.per_process_gpu_memory_fraction = 0.5
@@ -87,7 +87,9 @@ class Trainer(object):
                 total_loss = 0
                 lr = 0
                 time_step_train = time.time()
-                for step in range(( epoch * batch_steps_per_epoch), (( epoch + 1 ) * batch_steps_per_epoch)):
+                x = (epoch * batch_steps_per_epoch)
+                z = ((epoch + 1) * batch_steps_per_epoch)
+                for step in range(x, z):
                     batch_x, batch_tgt = data_provider.next_data('train')
                     skipped = 0
                     if batch_x is None:
