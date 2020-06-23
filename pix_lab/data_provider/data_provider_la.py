@@ -15,7 +15,7 @@ from scipy.ndimage.morphology import binary_dilation
 
 class Data_provider_la(object):
 
-    def __init__(self, path_list_train, path_list_val, n_classes, threadNum = 24, queueCapacity=0, kwargs_dat={}):
+    def __init__(self, path_list_train, path_list_val, n_classes, threadNum = 24, queueCapacity=64, kwargs_dat={}):
         self.n_classes = n_classes
         self.list_train = None
         self.size_train = 0
