@@ -66,6 +66,7 @@ class Trainer(object):
         val_size = data_provider.size_val
 
         session_conf = tf.ConfigProto()
+        session_conf.gpu_options.allow_growth = True
         session_conf.gpu_options.visible_device_list = gpu_device
         with tf.Session(config=session_conf) as sess:
             sess.run(init)
