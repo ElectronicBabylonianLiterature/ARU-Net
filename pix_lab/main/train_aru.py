@@ -7,9 +7,9 @@ from pix_lab.data_provider.data_provider_la import Data_provider_la
 from pix_lab.training.trainer import Trainer
 
 @click.command()
-@click.option('--path_list_train', default="......./lists/train.lst")
-@click.option('--path_list_val', default="......./lists/val.lst")
-@click.option('--output_folder', default="......./models/")
+@click.option('--path_list_train', default="/home/yunus/PycharmProjects/ARU-Net/train.lst")
+@click.option('--path_list_val', default="/home/yunus/PycharmProjects/ARU-Net/val.lst")
+@click.option('--output_folder', default="/home/yunus/PycharmProjects/ARU-Net/model_checkpoints")
 @click.option('--restore_path', default=None)
 def run(path_list_train, path_list_val, output_folder, restore_path):
     # Since the input images are of arbitrarily size, the autotune will significantly slow down training!
@@ -18,13 +18,13 @@ def run(path_list_train, path_list_val, output_folder, restore_path):
     # Images have to be gray scale images
     img_channels = 1
     # Number of output classes
-    n_class = 3
+    n_class = 2
     kwargs_dat = dict(batchsize_tr=1, scale_min=0.2, scale_max=0.5, scale_val=0.33, affine_tr=True,
                       one_hot_encoding=True)
     data_provider = Data_provider_la(path_list_train, path_list_val, n_class, kwargs_dat=kwargs_dat)
 
     # choose between 'u', 'ru', 'aru', 'laru'
-    model_kwargs = dict(model="ru")
+    model_kwargs = dict(model="aru")
     model = ARUnet(img_channels, n_class, model_kwargs=model_kwargs)
     opt_kwargs = dict(optimizer="rmsprop", learning_rate=0.001)
     cost_kwargs = dict(cost_name="cross_entropy")
