@@ -79,8 +79,8 @@ class Data_provider_la(object):
             q = self.q_train
         if q is None:
             return None, None
-        print("Val Q size: " + str(self.q_val.qsize()))
-        print("Train Q size: " + str(self.q_train.qsize()))
+        #print("Val Q size: " + str(self.q_val.qsize()))
+        #print("Train Q size: " + str(self.q_train.qsize()))
         return q.get()
 
 

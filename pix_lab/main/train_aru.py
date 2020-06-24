@@ -28,8 +28,8 @@ def run(path_list_train, path_list_val, output_folder, restore_path):
     model = ARUnet(img_channels, n_class, model_kwargs=model_kwargs)
     opt_kwargs = dict(optimizer="rmsprop", learning_rate=0.001)
     cost_kwargs = dict(cost_name="cross_entropy")
-    trainer = Trainer(model, opt_kwargs=opt_kwargs, cost_kwargs=cost_kwargs)
-    trainer.train(data_provider, output_folder, restore_path)
+    trainer = Trainer(model,opt_kwargs=opt_kwargs, cost_kwargs=cost_kwargs)
+    trainer.train(data_provider, output_folder, restore_path, batch_steps_per_epoch=256, epochs=50, gpu_device="0")
 
 
 if __name__ == '__main__':

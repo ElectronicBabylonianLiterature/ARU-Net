@@ -35,855 +35,537 @@ Use Variable.read_value. Variables in 2.X are initialized automatically both in 
 Optimizer: rmsprop
 Learning Rate: 0.001
 Use EMA: True
-2020-06-24 01:44:30.563227: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
-2020-06-24 01:44:30.600371: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3901540000 Hz
-2020-06-24 01:44:30.602001: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5572b0d82300 executing computations on platform Host. Devices:
-2020-06-24 01:44:30.602052: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
-2020-06-24 01:44:30.625240: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
-2020-06-24 01:44:30.948486: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:30.948906: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5572af759ca0 executing computations on platform CUDA. Devices:
-2020-06-24 01:44:30.948933: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2070, Compute Capability 7.5
-2020-06-24 01:44:30.950173: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:30.950598: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
+2020-06-24 01:51:51.882348: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-06-24 01:51:51.903843: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3901585000 Hz
+2020-06-24 01:51:51.904170: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55fb214925b0 executing computations on platform Host. Devices:
+2020-06-24 01:51:51.904178: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2020-06-24 01:51:51.905300: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcuda.so.1
+2020-06-24 01:51:52.056399: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.056834: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55fb21393b10 executing computations on platform CUDA. Devices:
+2020-06-24 01:51:52.056870: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce RTX 2070, Compute Capability 7.5
+2020-06-24 01:51:52.057143: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.057480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1640] Found device 0 with properties: 
 name: GeForce RTX 2070 major: 7 minor: 5 memoryClockRate(GHz): 1.62
 pciBusID: 0000:29:00.0
-2020-06-24 01:44:30.954290: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
-2020-06-24 01:44:31.008429: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
-2020-06-24 01:44:31.038266: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
-2020-06-24 01:44:31.050100: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
-2020-06-24 01:44:31.125321: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
-2020-06-24 01:44:31.169300: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
-2020-06-24 01:44:31.293630: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
-2020-06-24 01:44:31.293973: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:31.294510: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:31.294890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
-2020-06-24 01:44:31.295978: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
-2020-06-24 01:44:31.298335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
-2020-06-24 01:44:31.298359: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
-2020-06-24 01:44:31.298363: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
-2020-06-24 01:44:31.299748: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:31.300465: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
-2020-06-24 01:44:31.300973: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6632 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2070, pci bus id: 0000:29:00.0, compute capability: 7.5)
+2020-06-24 01:51:52.057763: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-06-24 01:51:52.058511: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcublas.so.10.0
+2020-06-24 01:51:52.059263: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcufft.so.10.0
+2020-06-24 01:51:52.059414: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcurand.so.10.0
+2020-06-24 01:51:52.060155: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusolver.so.10.0
+2020-06-24 01:51:52.060721: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcusparse.so.10.0
+2020-06-24 01:51:52.062259: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+2020-06-24 01:51:52.062352: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.062716: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.063003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1763] Adding visible gpu devices: 0
+2020-06-24 01:51:52.063024: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudart.so.10.0
+2020-06-24 01:51:52.063424: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1181] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-06-24 01:51:52.063430: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1187]      0 
+2020-06-24 01:51:52.063433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1200] 0:   N 
+2020-06-24 01:51:52.063498: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.063824: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1005] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-06-24 01:51:52.064131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1326] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6580 MB memory) -> physical GPU (device: 0, name: GeForce RTX 2070, pci bus id: 0000:29:00.0, compute capability: 7.5)
 Starting from scratch.
 Start optimization
-Val Q size: 81
-Train Q size: 317
-2020-06-24 01:44:38.635688: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
-Val Q size: 100
-Train Q size: 408
-Val Q size: 100
-Train Q size: 409
-Val Q size: 100
-Train Q size: 410
-Val Q size: 100
-Train Q size: 412
-Val Q size: 100
-Train Q size: 415
-Val Q size: 100
-Train Q size: 416
-Val Q size: 100
-Train Q size: 417
-Val Q size: 100
-Train Q size: 420
-Val Q size: 100
-Train Q size: 420
-Val Q size: 100
-Train Q size: 421
-Val Q size: 100
-Train Q size: 422
-Val Q size: 100
-Train Q size: 425
-Val Q size: 100
-Train Q size: 427
-Val Q size: 100
-Train Q size: 427
-Val Q size: 100
-Train Q size: 428
-Val Q size: 100
-Train Q size: 429
-Val Q size: 100
-Train Q size: 440
-Val Q size: 100
-Train Q size: 444
-Val Q size: 100
-Train Q size: 447
-Val Q size: 100
-Train Q size: 450
-Val Q size: 100
-Train Q size: 452
-Val Q size: 100
-Train Q size: 453
-Val Q size: 100
-Train Q size: 453
-Val Q size: 100
-Train Q size: 457
-Val Q size: 100
-Train Q size: 457
-Val Q size: 100
-Train Q size: 460
-Val Q size: 100
-Train Q size: 461
-Val Q size: 100
-Train Q size: 462
-Val Q size: 100
-Train Q size: 463
-Val Q size: 100
-Train Q size: 464
-Val Q size: 100
-Train Q size: 463
-Val Q size: 100
-Train Q size: 470
-Val Q size: 100
-Train Q size: 477
-Val Q size: 100
-Train Q size: 480
-Val Q size: 100
-Train Q size: 480
-Val Q size: 100
-Train Q size: 481
-Val Q size: 100
-Train Q size: 482
-Val Q size: 100
-Train Q size: 487
-Val Q size: 100
-Train Q size: 489
-Val Q size: 100
-Train Q size: 488
-Val Q size: 100
-Train Q size: 491
-Val Q size: 100
-Train Q size: 494
-Val Q size: 100
-Train Q size: 495
-Val Q size: 100
-Train Q size: 500
-Val Q size: 100
-Train Q size: 502
-Val Q size: 100
-Train Q size: 504
-Val Q size: 100
-Train Q size: 507
-Val Q size: 100
-Train Q size: 509
-Val Q size: 100
-Train Q size: 511
-Val Q size: 100
-Train Q size: 513
-Val Q size: 100
-Train Q size: 518
-Val Q size: 100
-Train Q size: 518
-Val Q size: 100
-Train Q size: 519
-Val Q size: 100
-Train Q size: 525
-Val Q size: 100
-Train Q size: 528
-Val Q size: 100
-Train Q size: 527
-Val Q size: 100
-Train Q size: 529
-Val Q size: 100
-Train Q size: 530
-Val Q size: 100
-Train Q size: 531
-Val Q size: 100
-Train Q size: 532
-Val Q size: 100
-Train Q size: 532
-Val Q size: 100
-Train Q size: 534
-Val Q size: 100
-Train Q size: 540
-Val Q size: 100
-Train Q size: 541
-Val Q size: 100
-Train Q size: 541
-Val Q size: 100
-Train Q size: 545
-Val Q size: 100
-Train Q size: 545
-Val Q size: 100
-Train Q size: 545
-Val Q size: 100
-Train Q size: 549
-Val Q size: 100
-Train Q size: 551
-Val Q size: 100
-Train Q size: 551
-Val Q size: 100
-Train Q size: 552
-Val Q size: 100
-Train Q size: 555
-Val Q size: 100
-Train Q size: 555
-Val Q size: 100
-Train Q size: 559
-Val Q size: 100
-Train Q size: 562
-Val Q size: 100
-Train Q size: 563
-Val Q size: 100
-Train Q size: 565
-Val Q size: 100
-Train Q size: 567
-Val Q size: 100
-Train Q size: 566
-Val Q size: 100
-Train Q size: 571
-Val Q size: 100
-Train Q size: 574
-Val Q size: 100
-Train Q size: 577
-Val Q size: 100
-Train Q size: 582
-Val Q size: 100
-Train Q size: 582
-Val Q size: 100
-Train Q size: 582
-Val Q size: 100
-Train Q size: 585
-Val Q size: 100
-Train Q size: 587
-Val Q size: 100
-Train Q size: 587
-Val Q size: 100
-Train Q size: 588
-Val Q size: 100
-Train Q size: 589
-Val Q size: 100
-Train Q size: 591
-Val Q size: 100
-Train Q size: 593
-Val Q size: 100
-Train Q size: 593
-Val Q size: 100
-Train Q size: 595
-Val Q size: 100
-Train Q size: 596
-Val Q size: 100
-Train Q size: 598
-Val Q size: 100
-Train Q size: 599
-Val Q size: 100
-Train Q size: 599
-Val Q size: 100
-Train Q size: 603
-Val Q size: 100
-Train Q size: 604
-Val Q size: 100
-Train Q size: 605
-Val Q size: 100
-Train Q size: 608
-Val Q size: 100
-Train Q size: 616
-Val Q size: 100
-Train Q size: 617
-Val Q size: 100
-Train Q size: 620
-Val Q size: 100
-Train Q size: 622
-Val Q size: 100
-Train Q size: 623
-Val Q size: 100
-Train Q size: 626
-Val Q size: 100
-Train Q size: 627
-Val Q size: 100
-Train Q size: 630
-Val Q size: 100
-Train Q size: 632
-Val Q size: 100
-Train Q size: 635
-Val Q size: 100
-Train Q size: 635
-Val Q size: 100
-Train Q size: 639
-Val Q size: 100
-Train Q size: 639
-Val Q size: 100
-Train Q size: 644
-Val Q size: 100
-Train Q size: 645
-Val Q size: 100
-Train Q size: 645
-Val Q size: 100
-Train Q size: 645
-Val Q size: 100
-Train Q size: 649
-Val Q size: 100
-Train Q size: 656
-Val Q size: 100
-Train Q size: 659
-Val Q size: 100
-Train Q size: 659
-Val Q size: 100
-Train Q size: 661
-Val Q size: 100
-Train Q size: 665
-Val Q size: 100
-Train Q size: 667
-Val Q size: 100
-Train Q size: 668
-Val Q size: 100
-Train Q size: 668
-Val Q size: 100
-Train Q size: 668
-Val Q size: 100
-Train Q size: 669
-Val Q size: 100
-Train Q size: 669
-Val Q size: 100
-Train Q size: 671
-Val Q size: 100
-Train Q size: 674
-Val Q size: 100
-Train Q size: 676
-Val Q size: 100
-Train Q size: 678
-Val Q size: 100
-Train Q size: 679
-Val Q size: 100
-Train Q size: 683
-Val Q size: 100
-Train Q size: 686
-Val Q size: 100
-Train Q size: 688
-Val Q size: 100
-Train Q size: 687
-Val Q size: 100
-Train Q size: 693
-Val Q size: 100
-Train Q size: 694
-Val Q size: 100
-Train Q size: 696
-Val Q size: 100
-Train Q size: 698
-Val Q size: 100
-Train Q size: 702
-Val Q size: 100
-Train Q size: 702
-Val Q size: 100
-Train Q size: 705
-Val Q size: 100
-Train Q size: 705
-Val Q size: 100
-Train Q size: 709
-Val Q size: 100
-Train Q size: 710
-Val Q size: 100
-Train Q size: 711
-Val Q size: 100
-Train Q size: 713
-Val Q size: 100
-Train Q size: 716
-Val Q size: 100
-Train Q size: 716
-Val Q size: 100
-Train Q size: 716
-Val Q size: 100
-Train Q size: 718
-Val Q size: 100
-Train Q size: 719
-Val Q size: 100
-Train Q size: 719
-Val Q size: 100
-Train Q size: 719
-Val Q size: 100
-Train Q size: 723
-Val Q size: 100
-Train Q size: 726
-Val Q size: 100
-Train Q size: 729
-Val Q size: 100
-Train Q size: 737
-Val Q size: 100
-Train Q size: 741
-Val Q size: 100
-Train Q size: 746
-Val Q size: 100
-Train Q size: 746
-Val Q size: 100
-Train Q size: 750
-Val Q size: 100
-Train Q size: 751
-Val Q size: 100
-Train Q size: 753
-Val Q size: 100
-Train Q size: 754
-Val Q size: 100
-Train Q size: 757
-Val Q size: 100
-Train Q size: 758
-Val Q size: 100
-Train Q size: 758
-Val Q size: 100
-Train Q size: 763
-Val Q size: 100
-Train Q size: 765
-Val Q size: 100
-Train Q size: 770
-Val Q size: 100
-Train Q size: 774
-Val Q size: 100
-Train Q size: 776
-Val Q size: 100
-Train Q size: 778
-Val Q size: 100
-Train Q size: 783
-Val Q size: 100
-Train Q size: 788
-Val Q size: 100
-Train Q size: 792
-Val Q size: 100
-Train Q size: 795
-Val Q size: 100
-Train Q size: 795
-Val Q size: 100
-Train Q size: 798
-Val Q size: 100
-Train Q size: 798
-Val Q size: 100
-Train Q size: 803
-Val Q size: 100
-Train Q size: 807
-Val Q size: 100
-Train Q size: 811
-Val Q size: 100
-Train Q size: 813
-Val Q size: 100
-Train Q size: 815
-Val Q size: 100
-Train Q size: 816
-Val Q size: 100
-Train Q size: 820
-Val Q size: 100
-Train Q size: 820
-Val Q size: 100
-Train Q size: 822
-Val Q size: 100
-Train Q size: 828
-Val Q size: 100
-Train Q size: 829
-Val Q size: 100
-Train Q size: 832
-Val Q size: 100
-Train Q size: 832
-Val Q size: 100
-Train Q size: 838
-Val Q size: 100
-Train Q size: 838
-Val Q size: 100
-Train Q size: 840
-Val Q size: 100
-Train Q size: 843
-Val Q size: 100
-Train Q size: 846
-Val Q size: 100
-Train Q size: 846
-Val Q size: 100
-Train Q size: 852
-Val Q size: 100
-Train Q size: 853
-Val Q size: 100
-Train Q size: 855
-Val Q size: 100
-Train Q size: 861
-Val Q size: 100
-Train Q size: 862
-Val Q size: 100
-Train Q size: 866
-Val Q size: 100
-Train Q size: 871
-Val Q size: 100
-Train Q size: 871
-Val Q size: 100
-Train Q size: 871
-Val Q size: 100
-Train Q size: 872
-Val Q size: 100
-Train Q size: 877
-Val Q size: 100
-Train Q size: 882
-Val Q size: 100
-Train Q size: 882
-Val Q size: 100
-Train Q size: 887
-Val Q size: 100
-Train Q size: 888
-Val Q size: 100
-Train Q size: 895
-Val Q size: 100
-Train Q size: 894
-Val Q size: 100
-Train Q size: 896
-Val Q size: 100
-Train Q size: 898
-Val Q size: 100
-Train Q size: 904
-Val Q size: 100
-Train Q size: 910
-Val Q size: 100
-Train Q size: 915
-Val Q size: 100
-Train Q size: 915
-Val Q size: 100
-Train Q size: 917
-Val Q size: 100
-Train Q size: 919
-Val Q size: 100
-Train Q size: 923
-Val Q size: 100
-Train Q size: 926
-Val Q size: 100
-Train Q size: 926
-Val Q size: 100
-Train Q size: 926
-Val Q size: 100
-Train Q size: 928
-Val Q size: 100
-Train Q size: 927
-Val Q size: 100
-Train Q size: 933
-Val Q size: 100
-Train Q size: 934
-Val Q size: 100
-Train Q size: 937
-Val Q size: 100
-Train Q size: 936
-Val Q size: 100
-Train Q size: 937
-Val Q size: 100
-Train Q size: 936
-Val Q size: 100
-Train Q size: 940
-Val Q size: 100
-Train Q size: 941
-Val Q size: 100
-Train Q size: 943
-Val Q size: 100
-Train Q size: 945
-Val Q size: 100
-Train Q size: 950
-Val Q size: 100
-Train Q size: 954
-Val Q size: 100
-Train Q size: 957
-Val Q size: 100
-Train Q size: 958
-Val Q size: 100
-Train Q size: 961
-Val Q size: 100
-Train Q size: 962
-Val Q size: 100
-Train Q size: 970
-Val Q size: 100
-Train Q size: 971
-Val Q size: 100
-Train Q size: 977
-Val Q size: 100
-Train Q size: 978
-Val Q size: 100
-Train Q size: 980
-Val Q size: 100
-Train Q size: 981
-Val Q size: 100
-Train Q size: 980
-Val Q size: 100
-Train Q size: 981
-Val Q size: 100
-Train Q size: 982
-Val Q size: 100
-Train Q size: 984
-Val Q size: 100
-Train Q size: 984
-Val Q size: 100
-Train Q size: 986
-Val Q size: 100
-Train Q size: 993
-Val Q size: 100
-Train Q size: 994
-Val Q size: 100
-Train Q size: 997
-Val Q size: 100
-Train Q size: 997
-Val Q size: 100
-Train Q size: 999
-Val Q size: 100
-Train Q size: 1004
-Val Q size: 100
-Train Q size: 1005
-Val Q size: 100
-Train Q size: 1010
-Val Q size: 100
-Train Q size: 1010
-Val Q size: 100
-Train Q size: 1015
-Val Q size: 100
-Train Q size: 1015
-Val Q size: 100
-Train Q size: 1018
-Val Q size: 100
-Train Q size: 1017
-Val Q size: 100
-Train Q size: 1020
-Val Q size: 100
-Train Q size: 1020
-Val Q size: 100
-Train Q size: 1024
-Val Q size: 100
-Train Q size: 1023
-Val Q size: 100
-Train Q size: 1025
-Val Q size: 100
-Train Q size: 1025
-Val Q size: 100
-Train Q size: 1034
-Val Q size: 100
-Train Q size: 1037
-Val Q size: 100
-Train Q size: 1038
-Val Q size: 100
-Train Q size: 1045
-Val Q size: 100
-Train Q size: 1045
-Val Q size: 100
-Train Q size: 1048
-Val Q size: 100
-Train Q size: 1052
-Val Q size: 100
-Train Q size: 1053
-Val Q size: 100
-Train Q size: 1054
-Val Q size: 100
-Train Q size: 1058
-Val Q size: 100
-Train Q size: 1062
-Val Q size: 100
-Train Q size: 1067
-Val Q size: 100
-Train Q size: 1071
-Val Q size: 100
-Train Q size: 1073
-Val Q size: 100
-Train Q size: 1078
-Val Q size: 100
-Train Q size: 1082
-Val Q size: 100
-Train Q size: 1088
-Val Q size: 100
-Train Q size: 1090
-Val Q size: 100
-Train Q size: 1098
-Val Q size: 100
-Train Q size: 1102
-Val Q size: 100
-Train Q size: 1103
-Val Q size: 100
-Train Q size: 1105
-Val Q size: 100
-Train Q size: 1110
-Val Q size: 100
-Train Q size: 1110
-Val Q size: 100
-Train Q size: 1110
-Val Q size: 100
-Train Q size: 1114
-Val Q size: 100
-Train Q size: 1117
-Val Q size: 100
-Train Q size: 1117
-Val Q size: 100
-Train Q size: 1118
-Val Q size: 100
-Train Q size: 1119
-Val Q size: 100
-Train Q size: 1122
-Val Q size: 100
-Train Q size: 1124
-Val Q size: 100
-Train Q size: 1125
-Val Q size: 100
-Train Q size: 1126
-Val Q size: 100
-Train Q size: 1130
-Val Q size: 100
-Train Q size: 1130
-Val Q size: 100
-Train Q size: 1132
-Val Q size: 100
-Train Q size: 1136
-Val Q size: 100
-Train Q size: 1136
-Val Q size: 100
-Train Q size: 1140
-Val Q size: 100
-Train Q size: 1140
-Val Q size: 100
-Train Q size: 1141
-Val Q size: 100
-Train Q size: 1143
-Val Q size: 100
-Train Q size: 1144
-Val Q size: 100
-Train Q size: 1144
-Val Q size: 100
-Train Q size: 1147
-Val Q size: 100
-Train Q size: 1149
-Val Q size: 100
-Train Q size: 1154
-Val Q size: 100
-Train Q size: 1154
-Val Q size: 100
-Train Q size: 1163
-Val Q size: 100
-Train Q size: 1168
-Val Q size: 100
-Train Q size: 1170
-Val Q size: 100
-Train Q size: 1174
-Val Q size: 100
-Train Q size: 1174
-Val Q size: 100
-Train Q size: 1177
-Val Q size: 100
-Train Q size: 1179
-Val Q size: 100
-Train Q size: 1182
-Val Q size: 100
-Train Q size: 1183
-Val Q size: 100
-Train Q size: 1185
-Val Q size: 100
-Train Q size: 1190
-Val Q size: 100
-Train Q size: 1200
-Val Q size: 100
-Train Q size: 1201
-Val Q size: 100
-Train Q size: 1203
-Val Q size: 100
-Train Q size: 1204
-Val Q size: 100
-Train Q size: 1215
-Val Q size: 100
-Train Q size: 1216
-Val Q size: 100
-Train Q size: 1217
-Val Q size: 100
-Train Q size: 1217
-Val Q size: 100
-Train Q size: 1223
-Val Q size: 100
-Train Q size: 1223
-Val Q size: 100
-Train Q size: 1225
-Val Q size: 100
-Train Q size: 1227
-Val Q size: 100
-Train Q size: 1229
-Val Q size: 100
-Train Q size: 1228
-Val Q size: 100
-Train Q size: 1230
-Val Q size: 100
-Train Q size: 1231
-Val Q size: 100
-Train Q size: 1234
-Val Q size: 100
-Train Q size: 1237
-Val Q size: 100
-Train Q size: 1239
-Val Q size: 100
-Train Q size: 1241
-Val Q size: 100
-Train Q size: 1244
-Val Q size: 100
-Train Q size: 1247
-Val Q size: 100
-Train Q size: 1248
-Val Q size: 100
-Train Q size: 1251
-Val Q size: 100
-Train Q size: 1253
-Val Q size: 100
-Train Q size: 1252
-Val Q size: 100
-Train Q size: 1259
-Val Q size: 100
-Train Q size: 1262
-Val Q size: 100
-Train Q size: 1264
-Val Q size: 100
-Train Q size: 1268
-Val Q size: 100
-Train Q size: 1272
-Val Q size: 100
-Train Q size: 1273
-Val Q size: 100
-Train Q size: 1274
-Val Q size: 100
-Train Q size: 1277
-Val Q size: 100
-Train Q size: 1277
-Val Q size: 100
-Train Q size: 1281
-Val Q size: 100
-Train Q size: 1282
-Val Q size: 100
-Train Q size: 1283
-Val Q size: 100
-Train Q size: 1282
-Val Q size: 100
-Train Q size: 1284
-Val Q size: 100
-Train Q size: 1285
-Val Q size: 100
-Train Q size: 1287
-Val Q size: 100
-Train Q size: 1287
-Val Q size: 100
-Train Q size: 1288
-Val Q size: 100
-Train Q size: 1288
-Val Q size: 100
-Train Q size: 1291
-Val Q size: 100
-Train Q size: 1294
-Val Q size: 100
-Train Q size: 1293
-Val Q size: 100
-Train Q size: 1294
-Val Q size: 100
-Train Q size: 1295
-Val Q size: 100
-Train Q size: 1297
-Val Q size: 100
-Train Q size: 1300
-Val Q size: 100
-Train Q size: 1304
-Val Q size: 100
-Train Q size: 1306
-Val Q size: 100
-Train Q size: 1309
-Val Q size: 100
-Train Q size: 1313
-Val Q size: 100
-Train Q size: 1319
-Val Q size: 100
-Train Q size: 1322
-Val Q size: 100
-Train Q size: 1323
-Val Q size: 100
-Train Q size: 1324
-Val Q size: 100
-Train Q size: 1326
-Val Q size: 100
-Train Q size: 1333
-Val Q size: 100
-Train Q size: 1341
-Val Q size: 100
-Train Q size: 1340
-Val Q size: 100
-Train Q size: 1346
+2020-06-24 01:51:55.628396: I tensorflow/stream_executor/platform/default/dso_loader.cc:42] Successfully opened dynamic library libcudnn.so.7
+TRAIN: Epoch 1, Average loss: 0.03027539, training samples shown: 1024, learning rate: 0.001000, time used: 187.22
+VAL: Epoch 1, Average loss: 0.00166710, time used: 0.59
+TRAIN: Epoch 2, Average loss: 0.01050834, training samples shown: 2048, learning rate: 0.000985, time used: 178.18
+VAL: Epoch 2, Average loss: 0.00123787, time used: 0.19
+TRAIN: Epoch 3, Average loss: 0.00724263, training samples shown: 3072, learning rate: 0.000970, time used: 175.37
+VAL: Epoch 3, Average loss: 0.00122472, time used: 0.20
+TRAIN: Epoch 4, Average loss: 0.00692652, training samples shown: 4096, learning rate: 0.000956, time used: 178.77
+VAL: Epoch 4, Average loss: 0.00146829, time used: 0.19
+TRAIN: Epoch 5, Average loss: 0.00651283, training samples shown: 5120, learning rate: 0.000941, time used: 176.34
+VAL: Epoch 5, Average loss: 0.00108180, time used: 0.22
+TRAIN: Epoch 6, Average loss: 0.00649094, training samples shown: 6144, learning rate: 0.000927, time used: 182.60
+VAL: Epoch 6, Average loss: 0.00127390, time used: 0.20
+TRAIN: Epoch 7, Average loss: 0.00576778, training samples shown: 7168, learning rate: 0.000913, time used: 180.57
+VAL: Epoch 7, Average loss: 0.00094392, time used: 0.19
+TRAIN: Epoch 8, Average loss: 0.00567278, training samples shown: 8192, learning rate: 0.000900, time used: 176.53
+VAL: Epoch 8, Average loss: 0.00098878, time used: 0.22
+TRAIN: Epoch 9, Average loss: 0.00549553, training samples shown: 9216, learning rate: 0.000886, time used: 179.03
+VAL: Epoch 9, Average loss: 0.00099897, time used: 0.19
+TRAIN: Epoch 10, Average loss: 0.00532209, training samples shown: 10240, learning rate: 0.000873, time used: 177.33
+VAL: Epoch 10, Average loss: 0.00107607, time used: 0.20
+TRAIN: Epoch 11, Average loss: 0.00491240, training samples shown: 11264, learning rate: 0.000860, time used: 175.95
+VAL: Epoch 11, Average loss: 0.00095491, time used: 0.20
+TRAIN: Epoch 12, Average loss: 0.00523531, training samples shown: 12288, learning rate: 0.000847, time used: 175.53
+VAL: Epoch 12, Average loss: 0.00107262, time used: 0.20
+TRAIN: Epoch 13, Average loss: 0.00479043, training samples shown: 13312, learning rate: 0.000834, time used: 177.65
+VAL: Epoch 13, Average loss: 0.00119220, time used: 0.20
+TRAIN: Epoch 14, Average loss: 0.00513481, training samples shown: 14336, learning rate: 0.000822, time used: 176.70
+VAL: Epoch 14, Average loss: 0.00096117, time used: 0.20
+TRAIN: Epoch 15, Average loss: 0.00491569, training samples shown: 15360, learning rate: 0.000809, time used: 171.67
+VAL: Epoch 15, Average loss: 0.00092364, time used: 0.20
+TRAIN: Epoch 16, Average loss: 0.00486674, training samples shown: 16384, learning rate: 0.000797, time used: 176.51
+VAL: Epoch 16, Average loss: 0.00091123, time used: 0.20
+TRAIN: Epoch 17, Average loss: 0.00492426, training samples shown: 17408, learning rate: 0.000785, time used: 175.82
+VAL: Epoch 17, Average loss: 0.00095152, time used: 0.21
+TRAIN: Epoch 18, Average loss: 0.00491533, training samples shown: 18432, learning rate: 0.000773, time used: 177.86
+VAL: Epoch 18, Average loss: 0.00092473, time used: 0.22
+TRAIN: Epoch 19, Average loss: 0.00446489, training samples shown: 19456, learning rate: 0.000762, time used: 175.17
+VAL: Epoch 19, Average loss: 0.00089828, time used: 0.21
+TRAIN: Epoch 20, Average loss: 0.00444548, training samples shown: 20480, learning rate: 0.000750, time used: 178.39
+VAL: Epoch 20, Average loss: 0.00100341, time used: 0.20
+TRAIN: Epoch 21, Average loss: 0.00448338, training samples shown: 21504, learning rate: 0.000739, time used: 176.35
+VAL: Epoch 21, Average loss: 0.00095643, time used: 0.20
+TRAIN: Epoch 22, Average loss: 0.00423773, training samples shown: 22528, learning rate: 0.000728, time used: 175.83
+VAL: Epoch 22, Average loss: 0.00088201, time used: 0.20
+TRAIN: Epoch 23, Average loss: 0.00440749, training samples shown: 23552, learning rate: 0.000717, time used: 176.07
+VAL: Epoch 23, Average loss: 0.00116212, time used: 0.22
+TRAIN: Epoch 24, Average loss: 0.00404302, training samples shown: 24576, learning rate: 0.000706, time used: 179.27
+VAL: Epoch 24, Average loss: 0.00092402, time used: 0.22
+TRAIN: Epoch 25, Average loss: 0.00429774, training samples shown: 25600, learning rate: 0.000696, time used: 182.82
+VAL: Epoch 25, Average loss: 0.00092316, time used: 0.21
+TRAIN: Epoch 26, Average loss: 0.00436245, training samples shown: 26624, learning rate: 0.000685, time used: 180.21
+VAL: Epoch 26, Average loss: 0.00094452, time used: 0.21
+TRAIN: Epoch 27, Average loss: 0.00430805, training samples shown: 27648, learning rate: 0.000675, time used: 182.67
+VAL: Epoch 27, Average loss: 0.00088265, time used: 0.21
+TRAIN: Epoch 28, Average loss: 0.00469372, training samples shown: 28672, learning rate: 0.000665, time used: 181.74
+VAL: Epoch 28, Average loss: 0.00095706, time used: 0.20
+TRAIN: Epoch 29, Average loss: 0.00398708, training samples shown: 29696, learning rate: 0.000655, time used: 178.17
+VAL: Epoch 29, Average loss: 0.00093307, time used: 0.20
+TRAIN: Epoch 30, Average loss: 0.00437291, training samples shown: 30720, learning rate: 0.000645, time used: 177.96
+VAL: Epoch 30, Average loss: 0.00095647, time used: 0.21
+TRAIN: Epoch 31, Average loss: 0.00399666, training samples shown: 31744, learning rate: 0.000635, time used: 181.19
+VAL: Epoch 31, Average loss: 0.00088634, time used: 0.20
+TRAIN: Epoch 32, Average loss: 0.00413328, training samples shown: 32768, learning rate: 0.000626, time used: 179.76
+VAL: Epoch 32, Average loss: 0.00092202, time used: 0.21
+TRAIN: Epoch 33, Average loss: 0.00395951, training samples shown: 33792, learning rate: 0.000617, time used: 182.19
+VAL: Epoch 33, Average loss: 0.00092929, time used: 0.20
+TRAIN: Epoch 34, Average loss: 0.00420303, training samples shown: 34816, learning rate: 0.000607, time used: 178.22
+VAL: Epoch 34, Average loss: 0.00086603, time used: 0.21
+TRAIN: Epoch 35, Average loss: 0.00393852, training samples shown: 35840, learning rate: 0.000598, time used: 173.44
+VAL: Epoch 35, Average loss: 0.00088286, time used: 0.21
+TRAIN: Epoch 36, Average loss: 0.00395016, training samples shown: 36864, learning rate: 0.000589, time used: 180.23
+VAL: Epoch 36, Average loss: 0.00087421, time used: 0.21
+TRAIN: Epoch 37, Average loss: 0.00392420, training samples shown: 37888, learning rate: 0.000580, time used: 177.80
+VAL: Epoch 37, Average loss: 0.00106877, time used: 0.20
+TRAIN: Epoch 38, Average loss: 0.00423033, training samples shown: 38912, learning rate: 0.000572, time used: 179.73
+VAL: Epoch 38, Average loss: 0.00092228, time used: 0.21
+TRAIN: Epoch 39, Average loss: 0.00388203, training samples shown: 39936, learning rate: 0.000563, time used: 173.71
+VAL: Epoch 39, Average loss: 0.00105866, time used: 0.21
+TRAIN: Epoch 40, Average loss: 0.00382979, training samples shown: 40960, learning rate: 0.000555, time used: 177.84
+VAL: Epoch 40, Average loss: 0.00092372, time used: 0.20
+TRAIN: Epoch 41, Average loss: 0.00389329, training samples shown: 41984, learning rate: 0.000546, time used: 178.81
+VAL: Epoch 41, Average loss: 0.00113888, time used: 0.21
+TRAIN: Epoch 42, Average loss: 0.00369928, training samples shown: 43008, learning rate: 0.000538, time used: 180.66
+VAL: Epoch 42, Average loss: 0.00101864, time used: 0.20
+TRAIN: Epoch 43, Average loss: 0.00397614, training samples shown: 44032, learning rate: 0.000530, time used: 180.80
+VAL: Epoch 43, Average loss: 0.00088654, time used: 0.20
+TRAIN: Epoch 44, Average loss: 0.00369581, training samples shown: 45056, learning rate: 0.000522, time used: 182.58
+VAL: Epoch 44, Average loss: 0.00086163, time used: 0.21
+TRAIN: Epoch 45, Average loss: 0.00383939, training samples shown: 46080, learning rate: 0.000514, time used: 184.51
+VAL: Epoch 45, Average loss: 0.00086348, time used: 0.20
+TRAIN: Epoch 46, Average loss: 0.00387742, training samples shown: 47104, learning rate: 0.000507, time used: 175.46
+VAL: Epoch 46, Average loss: 0.00084500, time used: 0.20
+TRAIN: Epoch 47, Average loss: 0.00388448, training samples shown: 48128, learning rate: 0.000499, time used: 176.88
+VAL: Epoch 47, Average loss: 0.00086576, time used: 0.21
+TRAIN: Epoch 48, Average loss: 0.00397274, training samples shown: 49152, learning rate: 0.000491, time used: 181.20
+VAL: Epoch 48, Average loss: 0.00083917, time used: 0.20
+TRAIN: Epoch 49, Average loss: 0.00367681, training samples shown: 50176, learning rate: 0.000484, time used: 178.89
+VAL: Epoch 49, Average loss: 0.00089235, time used: 0.21
+TRAIN: Epoch 50, Average loss: 0.00367810, training samples shown: 51200, learning rate: 0.000477, time used: 182.41
+VAL: Epoch 50, Average loss: 0.00089993, time used: 0.21
+TRAIN: Epoch 51, Average loss: 0.00366785, training samples shown: 52224, learning rate: 0.000470, time used: 179.61
+VAL: Epoch 51, Average loss: 0.00087808, time used: 0.20
+TRAIN: Epoch 52, Average loss: 0.00373352, training samples shown: 53248, learning rate: 0.000463, time used: 178.88
+VAL: Epoch 52, Average loss: 0.00090242, time used: 0.20
+TRAIN: Epoch 53, Average loss: 0.00364770, training samples shown: 54272, learning rate: 0.000456, time used: 181.79
+VAL: Epoch 53, Average loss: 0.00082685, time used: 0.19
+TRAIN: Epoch 54, Average loss: 0.00379484, training samples shown: 55296, learning rate: 0.000449, time used: 175.63
+VAL: Epoch 54, Average loss: 0.00098603, time used: 0.20
+TRAIN: Epoch 55, Average loss: 0.00380620, training samples shown: 56320, learning rate: 0.000442, time used: 172.23
+VAL: Epoch 55, Average loss: 0.00093457, time used: 0.20
+TRAIN: Epoch 56, Average loss: 0.00353252, training samples shown: 57344, learning rate: 0.000436, time used: 182.48
+VAL: Epoch 56, Average loss: 0.00089496, time used: 0.19
+TRAIN: Epoch 57, Average loss: 0.00360162, training samples shown: 58368, learning rate: 0.000429, time used: 177.59
+VAL: Epoch 57, Average loss: 0.00083755, time used: 0.20
+TRAIN: Epoch 58, Average loss: 0.00379029, training samples shown: 59392, learning rate: 0.000423, time used: 177.82
+VAL: Epoch 58, Average loss: 0.00084379, time used: 0.21
+TRAIN: Epoch 59, Average loss: 0.00387825, training samples shown: 60416, learning rate: 0.000416, time used: 172.18
+VAL: Epoch 59, Average loss: 0.00082868, time used: 0.19
+TRAIN: Epoch 60, Average loss: 0.00374738, training samples shown: 61440, learning rate: 0.000410, time used: 181.17
+VAL: Epoch 60, Average loss: 0.00088319, time used: 0.21
+TRAIN: Epoch 61, Average loss: 0.00377028, training samples shown: 62464, learning rate: 0.000404, time used: 176.60
+VAL: Epoch 61, Average loss: 0.00082917, time used: 0.20
+TRAIN: Epoch 62, Average loss: 0.00364834, training samples shown: 63488, learning rate: 0.000398, time used: 181.32
+VAL: Epoch 62, Average loss: 0.00077954, time used: 0.21
+TRAIN: Epoch 63, Average loss: 0.00368063, training samples shown: 64512, learning rate: 0.000392, time used: 175.89
+VAL: Epoch 63, Average loss: 0.00081717, time used: 0.21
+TRAIN: Epoch 64, Average loss: 0.00357946, training samples shown: 65536, learning rate: 0.000386, time used: 178.33
+VAL: Epoch 64, Average loss: 0.00083356, time used: 0.21
+TRAIN: Epoch 65, Average loss: 0.00349043, training samples shown: 66560, learning rate: 0.000380, time used: 174.97
+VAL: Epoch 65, Average loss: 0.00082311, time used: 0.20
+TRAIN: Epoch 66, Average loss: 0.00347561, training samples shown: 67584, learning rate: 0.000374, time used: 180.52
+VAL: Epoch 66, Average loss: 0.00081078, time used: 0.20
+TRAIN: Epoch 67, Average loss: 0.00343889, training samples shown: 68608, learning rate: 0.000369, time used: 176.33
+VAL: Epoch 67, Average loss: 0.00085546, time used: 0.21
+TRAIN: Epoch 68, Average loss: 0.00365046, training samples shown: 69632, learning rate: 0.000363, time used: 180.63
+VAL: Epoch 68, Average loss: 0.00079852, time used: 0.19
+TRAIN: Epoch 69, Average loss: 0.00357556, training samples shown: 70656, learning rate: 0.000358, time used: 174.67
+VAL: Epoch 69, Average loss: 0.00097695, time used: 0.20
+TRAIN: Epoch 70, Average loss: 0.00359450, training samples shown: 71680, learning rate: 0.000352, time used: 179.57
+VAL: Epoch 70, Average loss: 0.00081952, time used: 0.20
+TRAIN: Epoch 71, Average loss: 0.00349498, training samples shown: 72704, learning rate: 0.000347, time used: 178.81
+VAL: Epoch 71, Average loss: 0.00082206, time used: 0.20
+TRAIN: Epoch 72, Average loss: 0.00347755, training samples shown: 73728, learning rate: 0.000342, time used: 181.41
+VAL: Epoch 72, Average loss: 0.00093081, time used: 0.20
+TRAIN: Epoch 73, Average loss: 0.00362820, training samples shown: 74752, learning rate: 0.000337, time used: 174.60
+VAL: Epoch 73, Average loss: 0.00086170, time used: 0.20
+TRAIN: Epoch 74, Average loss: 0.00358129, training samples shown: 75776, learning rate: 0.000332, time used: 182.48
+VAL: Epoch 74, Average loss: 0.00082667, time used: 0.19
+TRAIN: Epoch 75, Average loss: 0.00355573, training samples shown: 76800, learning rate: 0.000327, time used: 177.98
+VAL: Epoch 75, Average loss: 0.00084802, time used: 0.20
+TRAIN: Epoch 76, Average loss: 0.00341231, training samples shown: 77824, learning rate: 0.000322, time used: 178.49
+VAL: Epoch 76, Average loss: 0.00083196, time used: 0.19
+TRAIN: Epoch 77, Average loss: 0.00346066, training samples shown: 78848, learning rate: 0.000317, time used: 179.58
+VAL: Epoch 77, Average loss: 0.00080525, time used: 0.20
+TRAIN: Epoch 78, Average loss: 0.00325466, training samples shown: 79872, learning rate: 0.000312, time used: 177.30
+VAL: Epoch 78, Average loss: 0.00085325, time used: 0.20
+TRAIN: Epoch 79, Average loss: 0.00333693, training samples shown: 80896, learning rate: 0.000308, time used: 177.03
+VAL: Epoch 79, Average loss: 0.00085707, time used: 0.20
+TRAIN: Epoch 80, Average loss: 0.00340281, training samples shown: 81920, learning rate: 0.000303, time used: 176.27
+VAL: Epoch 80, Average loss: 0.00085794, time used: 0.20
+TRAIN: Epoch 81, Average loss: 0.00326647, training samples shown: 82944, learning rate: 0.000298, time used: 181.37
+VAL: Epoch 81, Average loss: 0.00085846, time used: 0.20
+TRAIN: Epoch 82, Average loss: 0.00337994, training samples shown: 83968, learning rate: 0.000294, time used: 177.62
+VAL: Epoch 82, Average loss: 0.00079502, time used: 0.20
+TRAIN: Epoch 83, Average loss: 0.00345530, training samples shown: 84992, learning rate: 0.000290, time used: 181.62
+VAL: Epoch 83, Average loss: 0.00083161, time used: 0.20
+TRAIN: Epoch 84, Average loss: 0.00335321, training samples shown: 86016, learning rate: 0.000285, time used: 178.85
+VAL: Epoch 84, Average loss: 0.00084718, time used: 0.20
+TRAIN: Epoch 85, Average loss: 0.00336464, training samples shown: 87040, learning rate: 0.000281, time used: 177.51
+VAL: Epoch 85, Average loss: 0.00085571, time used: 0.20
+TRAIN: Epoch 86, Average loss: 0.00334715, training samples shown: 88064, learning rate: 0.000277, time used: 181.97
+VAL: Epoch 86, Average loss: 0.00082915, time used: 0.21
+TRAIN: Epoch 87, Average loss: 0.00334281, training samples shown: 89088, learning rate: 0.000273, time used: 181.31
+VAL: Epoch 87, Average loss: 0.00079039, time used: 0.20
+TRAIN: Epoch 88, Average loss: 0.00317902, training samples shown: 90112, learning rate: 0.000269, time used: 179.87
+VAL: Epoch 88, Average loss: 0.00082205, time used: 0.20
+TRAIN: Epoch 89, Average loss: 0.00319593, training samples shown: 91136, learning rate: 0.000264, time used: 181.33
+VAL: Epoch 89, Average loss: 0.00086423, time used: 0.21
+TRAIN: Epoch 90, Average loss: 0.00332114, training samples shown: 92160, learning rate: 0.000261, time used: 180.86
+VAL: Epoch 90, Average loss: 0.00077052, time used: 0.19
+TRAIN: Epoch 91, Average loss: 0.00331159, training samples shown: 93184, learning rate: 0.000257, time used: 176.16
+VAL: Epoch 91, Average loss: 0.00083830, time used: 0.20
+TRAIN: Epoch 92, Average loss: 0.00307960, training samples shown: 94208, learning rate: 0.000253, time used: 179.56
+VAL: Epoch 92, Average loss: 0.00079108, time used: 0.20
+TRAIN: Epoch 93, Average loss: 0.00342518, training samples shown: 95232, learning rate: 0.000249, time used: 177.62
+VAL: Epoch 93, Average loss: 0.00083533, time used: 0.20
+TRAIN: Epoch 94, Average loss: 0.00318493, training samples shown: 96256, learning rate: 0.000245, time used: 178.16
+VAL: Epoch 94, Average loss: 0.00079485, time used: 0.21
+TRAIN: Epoch 95, Average loss: 0.00316769, training samples shown: 97280, learning rate: 0.000242, time used: 182.87
+VAL: Epoch 95, Average loss: 0.00080166, time used: 0.20
+TRAIN: Epoch 96, Average loss: 0.00330403, training samples shown: 98304, learning rate: 0.000238, time used: 174.73
+VAL: Epoch 96, Average loss: 0.00080738, time used: 0.20
+TRAIN: Epoch 97, Average loss: 0.00310010, training samples shown: 99328, learning rate: 0.000234, time used: 178.11
+VAL: Epoch 97, Average loss: 0.00082459, time used: 0.20
+TRAIN: Epoch 98, Average loss: 0.00323717, training samples shown: 100352, learning rate: 0.000231, time used: 174.60
+VAL: Epoch 98, Average loss: 0.00088573, time used: 0.20
+TRAIN: Epoch 99, Average loss: 0.00320098, training samples shown: 101376, learning rate: 0.000227, time used: 180.95
+VAL: Epoch 99, Average loss: 0.00081472, time used: 0.20
+TRAIN: Epoch 100, Average loss: 0.00333236, training samples shown: 102400, learning rate: 0.000224, time used: 178.86
+VAL: Epoch 100, Average loss: 0.00082400, time used: 0.21
+TRAIN: Epoch 101, Average loss: 0.00343960, training samples shown: 103424, learning rate: 0.000221, time used: 176.21
+VAL: Epoch 101, Average loss: 0.00080765, time used: 0.19
+TRAIN: Epoch 102, Average loss: 0.00323093, training samples shown: 104448, learning rate: 0.000217, time used: 175.30
+VAL: Epoch 102, Average loss: 0.00079484, time used: 0.20
+TRAIN: Epoch 103, Average loss: 0.00337326, training samples shown: 105472, learning rate: 0.000214, time used: 180.00
+VAL: Epoch 103, Average loss: 0.00079449, time used: 0.19
+TRAIN: Epoch 104, Average loss: 0.00320181, training samples shown: 106496, learning rate: 0.000211, time used: 176.83
+VAL: Epoch 104, Average loss: 0.00076797, time used: 0.20
+TRAIN: Epoch 105, Average loss: 0.00324568, training samples shown: 107520, learning rate: 0.000208, time used: 178.16
+VAL: Epoch 105, Average loss: 0.00078698, time used: 0.20
+TRAIN: Epoch 106, Average loss: 0.00312272, training samples shown: 108544, learning rate: 0.000205, time used: 178.05
+VAL: Epoch 106, Average loss: 0.00082932, time used: 0.20
+TRAIN: Epoch 107, Average loss: 0.00345945, training samples shown: 109568, learning rate: 0.000201, time used: 176.16
+VAL: Epoch 107, Average loss: 0.00080286, time used: 0.20
+TRAIN: Epoch 108, Average loss: 0.00324755, training samples shown: 110592, learning rate: 0.000198, time used: 176.24
+VAL: Epoch 108, Average loss: 0.00075405, time used: 0.20
+TRAIN: Epoch 109, Average loss: 0.00290642, training samples shown: 111616, learning rate: 0.000195, time used: 179.19
+VAL: Epoch 109, Average loss: 0.00078981, time used: 0.21
+TRAIN: Epoch 110, Average loss: 0.00346396, training samples shown: 112640, learning rate: 0.000193, time used: 178.42
+VAL: Epoch 110, Average loss: 0.00075765, time used: 0.20
+TRAIN: Epoch 111, Average loss: 0.00303101, training samples shown: 113664, learning rate: 0.000190, time used: 177.25
+VAL: Epoch 111, Average loss: 0.00077559, time used: 0.20
+TRAIN: Epoch 112, Average loss: 0.00316632, training samples shown: 114688, learning rate: 0.000187, time used: 176.98
+VAL: Epoch 112, Average loss: 0.00077224, time used: 0.21
+TRAIN: Epoch 113, Average loss: 0.00314112, training samples shown: 115712, learning rate: 0.000184, time used: 177.39
+VAL: Epoch 113, Average loss: 0.00077521, time used: 0.20
+TRAIN: Epoch 114, Average loss: 0.00320694, training samples shown: 116736, learning rate: 0.000181, time used: 181.21
+VAL: Epoch 114, Average loss: 0.00078737, time used: 0.20
+TRAIN: Epoch 115, Average loss: 0.00302273, training samples shown: 117760, learning rate: 0.000179, time used: 184.46
+VAL: Epoch 115, Average loss: 0.00081222, time used: 0.21
+TRAIN: Epoch 116, Average loss: 0.00306834, training samples shown: 118784, learning rate: 0.000176, time used: 181.20
+VAL: Epoch 116, Average loss: 0.00081270, time used: 0.20
+TRAIN: Epoch 117, Average loss: 0.00331503, training samples shown: 119808, learning rate: 0.000173, time used: 180.90
+VAL: Epoch 117, Average loss: 0.00075944, time used: 0.20
+TRAIN: Epoch 118, Average loss: 0.00293917, training samples shown: 120832, learning rate: 0.000171, time used: 179.61
+VAL: Epoch 118, Average loss: 0.00076812, time used: 0.19
+TRAIN: Epoch 119, Average loss: 0.00314597, training samples shown: 121856, learning rate: 0.000168, time used: 180.23
+VAL: Epoch 119, Average loss: 0.00076981, time used: 0.21
+TRAIN: Epoch 120, Average loss: 0.00318592, training samples shown: 122880, learning rate: 0.000166, time used: 177.59
+VAL: Epoch 120, Average loss: 0.00076015, time used: 0.20
+TRAIN: Epoch 121, Average loss: 0.00292877, training samples shown: 123904, learning rate: 0.000163, time used: 176.50
+VAL: Epoch 121, Average loss: 0.00076133, time used: 0.21
+TRAIN: Epoch 122, Average loss: 0.00313262, training samples shown: 124928, learning rate: 0.000161, time used: 178.13
+VAL: Epoch 122, Average loss: 0.00073534, time used: 0.20
+TRAIN: Epoch 123, Average loss: 0.00322791, training samples shown: 125952, learning rate: 0.000158, time used: 176.97
+VAL: Epoch 123, Average loss: 0.00078532, time used: 0.20
+TRAIN: Epoch 124, Average loss: 0.00295487, training samples shown: 126976, learning rate: 0.000156, time used: 176.94
+VAL: Epoch 124, Average loss: 0.00075311, time used: 0.21
+TRAIN: Epoch 125, Average loss: 0.00333876, training samples shown: 128000, learning rate: 0.000153, time used: 177.98
+VAL: Epoch 125, Average loss: 0.00080544, time used: 0.20
+TRAIN: Epoch 126, Average loss: 0.00313067, training samples shown: 129024, learning rate: 0.000151, time used: 179.28
+VAL: Epoch 126, Average loss: 0.00077581, time used: 0.19
+TRAIN: Epoch 127, Average loss: 0.00298993, training samples shown: 130048, learning rate: 0.000149, time used: 179.81
+VAL: Epoch 127, Average loss: 0.00076762, time used: 0.20
+TRAIN: Epoch 128, Average loss: 0.00315716, training samples shown: 131072, learning rate: 0.000147, time used: 180.30
+VAL: Epoch 128, Average loss: 0.00078730, time used: 0.20
+TRAIN: Epoch 129, Average loss: 0.00319016, training samples shown: 132096, learning rate: 0.000144, time used: 176.75
+VAL: Epoch 129, Average loss: 0.00077203, time used: 0.19
+TRAIN: Epoch 130, Average loss: 0.00289661, training samples shown: 133120, learning rate: 0.000142, time used: 175.54
+VAL: Epoch 130, Average loss: 0.00076910, time used: 0.22
+TRAIN: Epoch 131, Average loss: 0.00305802, training samples shown: 134144, learning rate: 0.000140, time used: 176.93
+VAL: Epoch 131, Average loss: 0.00073672, time used: 0.21
+TRAIN: Epoch 132, Average loss: 0.00297820, training samples shown: 135168, learning rate: 0.000138, time used: 181.60
+VAL: Epoch 132, Average loss: 0.00077167, time used: 0.21
+TRAIN: Epoch 133, Average loss: 0.00293394, training samples shown: 136192, learning rate: 0.000136, time used: 175.12
+VAL: Epoch 133, Average loss: 0.00077549, time used: 0.20
+TRAIN: Epoch 134, Average loss: 0.00314642, training samples shown: 137216, learning rate: 0.000134, time used: 180.34
+VAL: Epoch 134, Average loss: 0.00075559, time used: 0.21
+TRAIN: Epoch 135, Average loss: 0.00312980, training samples shown: 138240, learning rate: 0.000132, time used: 177.42
+VAL: Epoch 135, Average loss: 0.00077015, time used: 0.20
+TRAIN: Epoch 136, Average loss: 0.00327057, training samples shown: 139264, learning rate: 0.000130, time used: 175.79
+VAL: Epoch 136, Average loss: 0.00084688, time used: 0.20
+TRAIN: Epoch 137, Average loss: 0.00288232, training samples shown: 140288, learning rate: 0.000128, time used: 180.98
+VAL: Epoch 137, Average loss: 0.00078962, time used: 0.20
+TRAIN: Epoch 138, Average loss: 0.00318066, training samples shown: 141312, learning rate: 0.000126, time used: 181.41
+VAL: Epoch 138, Average loss: 0.00078619, time used: 0.20
+TRAIN: Epoch 139, Average loss: 0.00303517, training samples shown: 142336, learning rate: 0.000124, time used: 180.10
+VAL: Epoch 139, Average loss: 0.00079345, time used: 0.20
+TRAIN: Epoch 140, Average loss: 0.00313626, training samples shown: 143360, learning rate: 0.000122, time used: 181.68
+VAL: Epoch 140, Average loss: 0.00074258, time used: 0.21
+TRAIN: Epoch 141, Average loss: 0.00304636, training samples shown: 144384, learning rate: 0.000121, time used: 177.12
+VAL: Epoch 141, Average loss: 0.00076980, time used: 0.20
+TRAIN: Epoch 142, Average loss: 0.00312611, training samples shown: 145408, learning rate: 0.000119, time used: 179.31
+VAL: Epoch 142, Average loss: 0.00076823, time used: 0.20
+TRAIN: Epoch 143, Average loss: 0.00288697, training samples shown: 146432, learning rate: 0.000117, time used: 182.94
+VAL: Epoch 143, Average loss: 0.00077569, time used: 0.20
+TRAIN: Epoch 144, Average loss: 0.00320058, training samples shown: 147456, learning rate: 0.000115, time used: 177.06
+VAL: Epoch 144, Average loss: 0.00076090, time used: 0.19
+TRAIN: Epoch 145, Average loss: 0.00305103, training samples shown: 148480, learning rate: 0.000113, time used: 183.27
+VAL: Epoch 145, Average loss: 0.00075403, time used: 0.22
+TRAIN: Epoch 146, Average loss: 0.00280410, training samples shown: 149504, learning rate: 0.000112, time used: 178.22
+VAL: Epoch 146, Average loss: 0.00075980, time used: 0.19
+TRAIN: Epoch 147, Average loss: 0.00313234, training samples shown: 150528, learning rate: 0.000110, time used: 180.90
+VAL: Epoch 147, Average loss: 0.00076226, time used: 0.21
+TRAIN: Epoch 148, Average loss: 0.00316136, training samples shown: 151552, learning rate: 0.000108, time used: 177.67
+VAL: Epoch 148, Average loss: 0.00075313, time used: 0.21
+TRAIN: Epoch 149, Average loss: 0.00332501, training samples shown: 152576, learning rate: 0.000107, time used: 178.13
+VAL: Epoch 149, Average loss: 0.00078435, time used: 0.21
+TRAIN: Epoch 150, Average loss: 0.00285234, training samples shown: 153600, learning rate: 0.000105, time used: 178.28
+VAL: Epoch 150, Average loss: 0.00077745, time used: 0.21
+TRAIN: Epoch 151, Average loss: 0.00315046, training samples shown: 154624, learning rate: 0.000104, time used: 178.99
+VAL: Epoch 151, Average loss: 0.00076736, time used: 0.20
+TRAIN: Epoch 152, Average loss: 0.00304564, training samples shown: 155648, learning rate: 0.000102, time used: 176.31
+VAL: Epoch 152, Average loss: 0.00075184, time used: 0.20
+TRAIN: Epoch 153, Average loss: 0.00297197, training samples shown: 156672, learning rate: 0.000101, time used: 177.18
+VAL: Epoch 153, Average loss: 0.00076318, time used: 0.20
+TRAIN: Epoch 154, Average loss: 0.00311418, training samples shown: 157696, learning rate: 0.000099, time used: 178.93
+VAL: Epoch 154, Average loss: 0.00074735, time used: 0.19
+TRAIN: Epoch 155, Average loss: 0.00302123, training samples shown: 158720, learning rate: 0.000098, time used: 176.62
+VAL: Epoch 155, Average loss: 0.00074680, time used: 0.20
+TRAIN: Epoch 156, Average loss: 0.00299628, training samples shown: 159744, learning rate: 0.000096, time used: 183.63
+VAL: Epoch 156, Average loss: 0.00077178, time used: 0.20
+TRAIN: Epoch 157, Average loss: 0.00314095, training samples shown: 160768, learning rate: 0.000095, time used: 177.01
+VAL: Epoch 157, Average loss: 0.00077602, time used: 0.21
+TRAIN: Epoch 158, Average loss: 0.00302232, training samples shown: 161792, learning rate: 0.000093, time used: 180.25
+VAL: Epoch 158, Average loss: 0.00075670, time used: 0.20
+TRAIN: Epoch 159, Average loss: 0.00306419, training samples shown: 162816, learning rate: 0.000092, time used: 179.70
+VAL: Epoch 159, Average loss: 0.00075442, time used: 0.20
+TRAIN: Epoch 160, Average loss: 0.00294119, training samples shown: 163840, learning rate: 0.000090, time used: 180.78
+VAL: Epoch 160, Average loss: 0.00074395, time used: 0.22
+TRAIN: Epoch 161, Average loss: 0.00293676, training samples shown: 164864, learning rate: 0.000089, time used: 178.23
+VAL: Epoch 161, Average loss: 0.00076405, time used: 0.21
+TRAIN: Epoch 162, Average loss: 0.00300201, training samples shown: 165888, learning rate: 0.000088, time used: 180.30
+VAL: Epoch 162, Average loss: 0.00077068, time used: 0.20
+TRAIN: Epoch 163, Average loss: 0.00295712, training samples shown: 166912, learning rate: 0.000086, time used: 180.67
+VAL: Epoch 163, Average loss: 0.00076534, time used: 0.20
+TRAIN: Epoch 164, Average loss: 0.00299586, training samples shown: 167936, learning rate: 0.000085, time used: 179.23
+VAL: Epoch 164, Average loss: 0.00075352, time used: 0.21
+TRAIN: Epoch 165, Average loss: 0.00303893, training samples shown: 168960, learning rate: 0.000084, time used: 176.22
+VAL: Epoch 165, Average loss: 0.00076065, time used: 0.21
+TRAIN: Epoch 166, Average loss: 0.00296436, training samples shown: 169984, learning rate: 0.000083, time used: 185.73
+VAL: Epoch 166, Average loss: 0.00074971, time used: 0.21
+TRAIN: Epoch 167, Average loss: 0.00293627, training samples shown: 171008, learning rate: 0.000081, time used: 183.18
+VAL: Epoch 167, Average loss: 0.00075865, time used: 0.21
+TRAIN: Epoch 168, Average loss: 0.00296717, training samples shown: 172032, learning rate: 0.000080, time used: 182.23
+VAL: Epoch 168, Average loss: 0.00076169, time used: 0.21
+TRAIN: Epoch 169, Average loss: 0.00322893, training samples shown: 173056, learning rate: 0.000079, time used: 171.80
+VAL: Epoch 169, Average loss: 0.00074888, time used: 0.20
+TRAIN: Epoch 170, Average loss: 0.00283231, training samples shown: 174080, learning rate: 0.000078, time used: 181.34
+VAL: Epoch 170, Average loss: 0.00075464, time used: 0.21
+TRAIN: Epoch 171, Average loss: 0.00280913, training samples shown: 175104, learning rate: 0.000077, time used: 179.18
+VAL: Epoch 171, Average loss: 0.00076516, time used: 0.20
+TRAIN: Epoch 172, Average loss: 0.00299519, training samples shown: 176128, learning rate: 0.000075, time used: 176.84
+VAL: Epoch 172, Average loss: 0.00075515, time used: 0.21
+TRAIN: Epoch 173, Average loss: 0.00298647, training samples shown: 177152, learning rate: 0.000074, time used: 183.45
+VAL: Epoch 173, Average loss: 0.00076082, time used: 0.22
+TRAIN: Epoch 174, Average loss: 0.00290438, training samples shown: 178176, learning rate: 0.000073, time used: 187.05
+VAL: Epoch 174, Average loss: 0.00075421, time used: 0.25
+TRAIN: Epoch 175, Average loss: 0.00289187, training samples shown: 179200, learning rate: 0.000072, time used: 186.40
+VAL: Epoch 175, Average loss: 0.00075041, time used: 0.20
+TRAIN: Epoch 176, Average loss: 0.00272586, training samples shown: 180224, learning rate: 0.000071, time used: 174.85
+VAL: Epoch 176, Average loss: 0.00077753, time used: 0.21
+TRAIN: Epoch 177, Average loss: 0.00292939, training samples shown: 181248, learning rate: 0.000070, time used: 177.27
+VAL: Epoch 177, Average loss: 0.00075806, time used: 0.19
+TRAIN: Epoch 178, Average loss: 0.00284365, training samples shown: 182272, learning rate: 0.000069, time used: 178.65
+VAL: Epoch 178, Average loss: 0.00080115, time used: 0.20
+TRAIN: Epoch 179, Average loss: 0.00316944, training samples shown: 183296, learning rate: 0.000068, time used: 175.88
+VAL: Epoch 179, Average loss: 0.00075559, time used: 0.20
+TRAIN: Epoch 180, Average loss: 0.00283357, training samples shown: 184320, learning rate: 0.000067, time used: 178.46
+VAL: Epoch 180, Average loss: 0.00073819, time used: 0.21
+TRAIN: Epoch 181, Average loss: 0.00319818, training samples shown: 185344, learning rate: 0.000066, time used: 179.29
+VAL: Epoch 181, Average loss: 0.00074819, time used: 0.20
+TRAIN: Epoch 182, Average loss: 0.00292444, training samples shown: 186368, learning rate: 0.000065, time used: 181.25
+VAL: Epoch 182, Average loss: 0.00075665, time used: 0.20
+TRAIN: Epoch 183, Average loss: 0.00306100, training samples shown: 187392, learning rate: 0.000064, time used: 182.65
+VAL: Epoch 183, Average loss: 0.00076580, time used: 0.19
+TRAIN: Epoch 184, Average loss: 0.00296323, training samples shown: 188416, learning rate: 0.000063, time used: 178.32
+VAL: Epoch 184, Average loss: 0.00077477, time used: 0.19
+TRAIN: Epoch 185, Average loss: 0.00293222, training samples shown: 189440, learning rate: 0.000062, time used: 176.49
+VAL: Epoch 185, Average loss: 0.00074944, time used: 0.21
+TRAIN: Epoch 186, Average loss: 0.00295736, training samples shown: 190464, learning rate: 0.000061, time used: 178.60
+VAL: Epoch 186, Average loss: 0.00076754, time used: 0.21
+TRAIN: Epoch 187, Average loss: 0.00291822, training samples shown: 191488, learning rate: 0.000060, time used: 179.78
+VAL: Epoch 187, Average loss: 0.00073376, time used: 0.21
+TRAIN: Epoch 188, Average loss: 0.00307439, training samples shown: 192512, learning rate: 0.000059, time used: 174.16
+VAL: Epoch 188, Average loss: 0.00075556, time used: 0.20
+TRAIN: Epoch 189, Average loss: 0.00289599, training samples shown: 193536, learning rate: 0.000058, time used: 186.61
+VAL: Epoch 189, Average loss: 0.00075441, time used: 0.23
+TRAIN: Epoch 190, Average loss: 0.00299085, training samples shown: 194560, learning rate: 0.000057, time used: 189.16
+VAL: Epoch 190, Average loss: 0.00077002, time used: 0.20
+TRAIN: Epoch 191, Average loss: 0.00275078, training samples shown: 195584, learning rate: 0.000057, time used: 174.81
+VAL: Epoch 191, Average loss: 0.00075481, time used: 0.20
+TRAIN: Epoch 192, Average loss: 0.00308448, training samples shown: 196608, learning rate: 0.000056, time used: 178.36
+VAL: Epoch 192, Average loss: 0.00077006, time used: 0.20
+TRAIN: Epoch 193, Average loss: 0.00288191, training samples shown: 197632, learning rate: 0.000055, time used: 178.08
+VAL: Epoch 193, Average loss: 0.00076133, time used: 0.20
+TRAIN: Epoch 194, Average loss: 0.00299316, training samples shown: 198656, learning rate: 0.000054, time used: 180.51
+VAL: Epoch 194, Average loss: 0.00076022, time used: 0.21
+TRAIN: Epoch 195, Average loss: 0.00293740, training samples shown: 199680, learning rate: 0.000053, time used: 179.10
+VAL: Epoch 195, Average loss: 0.00075037, time used: 0.20
+TRAIN: Epoch 196, Average loss: 0.00296140, training samples shown: 200704, learning rate: 0.000052, time used: 180.79
+VAL: Epoch 196, Average loss: 0.00074998, time used: 0.20
+TRAIN: Epoch 197, Average loss: 0.00299431, training samples shown: 201728, learning rate: 0.000052, time used: 174.08
+VAL: Epoch 197, Average loss: 0.00075914, time used: 0.21
+TRAIN: Epoch 198, Average loss: 0.00294933, training samples shown: 202752, learning rate: 0.000051, time used: 178.59
+VAL: Epoch 198, Average loss: 0.00074084, time used: 0.20
+TRAIN: Epoch 199, Average loss: 0.00292014, training samples shown: 203776, learning rate: 0.000050, time used: 177.86
+VAL: Epoch 199, Average loss: 0.00075268, time used: 0.20
+TRAIN: Epoch 200, Average loss: 0.00284132, training samples shown: 204800, learning rate: 0.000049, time used: 181.58
+VAL: Epoch 200, Average loss: 0.00072832, time used: 0.22
+TRAIN: Epoch 201, Average loss: 0.00284056, training samples shown: 205824, learning rate: 0.000049, time used: 177.03
+VAL: Epoch 201, Average loss: 0.00073620, time used: 0.20
+TRAIN: Epoch 202, Average loss: 0.00281691, training samples shown: 206848, learning rate: 0.000048, time used: 190.87
+VAL: Epoch 202, Average loss: 0.00075224, time used: 0.24
+TRAIN: Epoch 203, Average loss: 0.00294168, training samples shown: 207872, learning rate: 0.000047, time used: 183.33
+VAL: Epoch 203, Average loss: 0.00075774, time used: 0.24
+TRAIN: Epoch 204, Average loss: 0.00290676, training samples shown: 208896, learning rate: 0.000047, time used: 195.95
+VAL: Epoch 204, Average loss: 0.00075375, time used: 0.24
+TRAIN: Epoch 205, Average loss: 0.00276037, training samples shown: 209920, learning rate: 0.000046, time used: 206.98
+VAL: Epoch 205, Average loss: 0.00073891, time used: 0.23
+TRAIN: Epoch 206, Average loss: 0.00287687, training samples shown: 210944, learning rate: 0.000045, time used: 207.81
+VAL: Epoch 206, Average loss: 0.00073369, time used: 0.24
+TRAIN: Epoch 207, Average loss: 0.00307402, training samples shown: 211968, learning rate: 0.000044, time used: 199.06
+VAL: Epoch 207, Average loss: 0.00075787, time used: 0.19
+TRAIN: Epoch 208, Average loss: 0.00285762, training samples shown: 212992, learning rate: 0.000044, time used: 181.35
+VAL: Epoch 208, Average loss: 0.00076490, time used: 0.20
+TRAIN: Epoch 209, Average loss: 0.00307818, training samples shown: 214016, learning rate: 0.000043, time used: 179.35
+VAL: Epoch 209, Average loss: 0.00076421, time used: 0.20
+TRAIN: Epoch 210, Average loss: 0.00285558, training samples shown: 215040, learning rate: 0.000042, time used: 174.64
+VAL: Epoch 210, Average loss: 0.00073837, time used: 0.20
+TRAIN: Epoch 211, Average loss: 0.00293801, training samples shown: 216064, learning rate: 0.000042, time used: 178.59
+VAL: Epoch 211, Average loss: 0.00074193, time used: 0.20
+TRAIN: Epoch 212, Average loss: 0.00293402, training samples shown: 217088, learning rate: 0.000041, time used: 172.62
+VAL: Epoch 212, Average loss: 0.00074908, time used: 0.21
+TRAIN: Epoch 213, Average loss: 0.00300657, training samples shown: 218112, learning rate: 0.000041, time used: 170.94
+VAL: Epoch 213, Average loss: 0.00074956, time used: 0.20
+TRAIN: Epoch 214, Average loss: 0.00298139, training samples shown: 219136, learning rate: 0.000040, time used: 178.89
+VAL: Epoch 214, Average loss: 0.00073041, time used: 0.21
+TRAIN: Epoch 215, Average loss: 0.00287798, training samples shown: 220160, learning rate: 0.000039, time used: 179.83
+VAL: Epoch 215, Average loss: 0.00075052, time used: 0.20
+TRAIN: Epoch 216, Average loss: 0.00296199, training samples shown: 221184, learning rate: 0.000039, time used: 173.47
+VAL: Epoch 216, Average loss: 0.00075307, time used: 0.21
+TRAIN: Epoch 217, Average loss: 0.00289171, training samples shown: 222208, learning rate: 0.000038, time used: 177.89
+VAL: Epoch 217, Average loss: 0.00075398, time used: 0.20
+TRAIN: Epoch 218, Average loss: 0.00271940, training samples shown: 223232, learning rate: 0.000038, time used: 179.83
+VAL: Epoch 218, Average loss: 0.00074727, time used: 0.20
+TRAIN: Epoch 219, Average loss: 0.00287762, training samples shown: 224256, learning rate: 0.000037, time used: 182.39
+VAL: Epoch 219, Average loss: 0.00073621, time used: 0.20
+TRAIN: Epoch 220, Average loss: 0.00279142, training samples shown: 225280, learning rate: 0.000037, time used: 177.98
+VAL: Epoch 220, Average loss: 0.00074043, time used: 0.19
+TRAIN: Epoch 221, Average loss: 0.00303242, training samples shown: 226304, learning rate: 0.000036, time used: 179.39
+VAL: Epoch 221, Average loss: 0.00073423, time used: 0.21
+TRAIN: Epoch 222, Average loss: 0.00282575, training samples shown: 227328, learning rate: 0.000035, time used: 180.35
+VAL: Epoch 222, Average loss: 0.00074321, time used: 0.21
+TRAIN: Epoch 223, Average loss: 0.00309732, training samples shown: 228352, learning rate: 0.000035, time used: 178.01
+VAL: Epoch 223, Average loss: 0.00075208, time used: 0.19
+TRAIN: Epoch 224, Average loss: 0.00272375, training samples shown: 229376, learning rate: 0.000034, time used: 177.57
+VAL: Epoch 224, Average loss: 0.00076882, time used: 0.20
+TRAIN: Epoch 225, Average loss: 0.00295234, training samples shown: 230400, learning rate: 0.000034, time used: 177.21
+VAL: Epoch 225, Average loss: 0.00074768, time used: 0.20
+TRAIN: Epoch 226, Average loss: 0.00284878, training samples shown: 231424, learning rate: 0.000033, time used: 180.00
+VAL: Epoch 226, Average loss: 0.00078882, time used: 0.20
+TRAIN: Epoch 227, Average loss: 0.00291813, training samples shown: 232448, learning rate: 0.000033, time used: 175.76
+VAL: Epoch 227, Average loss: 0.00073462, time used: 0.22
+TRAIN: Epoch 228, Average loss: 0.00283301, training samples shown: 233472, learning rate: 0.000032, time used: 179.59
+VAL: Epoch 228, Average loss: 0.00074465, time used: 0.19
+TRAIN: Epoch 229, Average loss: 0.00285731, training samples shown: 234496, learning rate: 0.000032, time used: 178.58
+VAL: Epoch 229, Average loss: 0.00075085, time used: 0.20
+TRAIN: Epoch 230, Average loss: 0.00281371, training samples shown: 235520, learning rate: 0.000031, time used: 174.04
+VAL: Epoch 230, Average loss: 0.00074210, time used: 0.19
+TRAIN: Epoch 231, Average loss: 0.00304948, training samples shown: 236544, learning rate: 0.000031, time used: 176.53
+VAL: Epoch 231, Average loss: 0.00075181, time used: 0.22
+TRAIN: Epoch 232, Average loss: 0.00310896, training samples shown: 237568, learning rate: 0.000030, time used: 173.99
+VAL: Epoch 232, Average loss: 0.00076626, time used: 0.20
+TRAIN: Epoch 233, Average loss: 0.00275432, training samples shown: 238592, learning rate: 0.000030, time used: 176.80
+VAL: Epoch 233, Average loss: 0.00076225, time used: 0.20
+TRAIN: Epoch 234, Average loss: 0.00294010, training samples shown: 239616, learning rate: 0.000030, time used: 175.22
+VAL: Epoch 234, Average loss: 0.00075512, time used: 0.20
+TRAIN: Epoch 235, Average loss: 0.00293657, training samples shown: 240640, learning rate: 0.000029, time used: 173.55
+VAL: Epoch 235, Average loss: 0.00072432, time used: 0.20
+TRAIN: Epoch 236, Average loss: 0.00259872, training samples shown: 241664, learning rate: 0.000029, time used: 181.84
+VAL: Epoch 236, Average loss: 0.00075500, time used: 0.20
+TRAIN: Epoch 237, Average loss: 0.00295005, training samples shown: 242688, learning rate: 0.000028, time used: 178.43
+VAL: Epoch 237, Average loss: 0.00076200, time used: 0.20
+TRAIN: Epoch 238, Average loss: 0.00289037, training samples shown: 243712, learning rate: 0.000028, time used: 179.59
+VAL: Epoch 238, Average loss: 0.00074089, time used: 0.20
+TRAIN: Epoch 239, Average loss: 0.00299300, training samples shown: 244736, learning rate: 0.000027, time used: 177.37
+VAL: Epoch 239, Average loss: 0.00074192, time used: 0.19
+TRAIN: Epoch 240, Average loss: 0.00283526, training samples shown: 245760, learning rate: 0.000027, time used: 181.04
+VAL: Epoch 240, Average loss: 0.00074898, time used: 0.21
+TRAIN: Epoch 241, Average loss: 0.00280343, training samples shown: 246784, learning rate: 0.000027, time used: 181.55
+VAL: Epoch 241, Average loss: 0.00074464, time used: 0.21
+TRAIN: Epoch 242, Average loss: 0.00288972, training samples shown: 247808, learning rate: 0.000026, time used: 175.11
+VAL: Epoch 242, Average loss: 0.00073777, time used: 0.20
+TRAIN: Epoch 243, Average loss: 0.00277031, training samples shown: 248832, learning rate: 0.000026, time used: 181.48
+VAL: Epoch 243, Average loss: 0.00074723, time used: 0.20
+TRAIN: Epoch 244, Average loss: 0.00273637, training samples shown: 249856, learning rate: 0.000025, time used: 186.21
+VAL: Epoch 244, Average loss: 0.00074460, time used: 0.20
+TRAIN: Epoch 245, Average loss: 0.00277329, training samples shown: 250880, learning rate: 0.000025, time used: 202.30
+VAL: Epoch 245, Average loss: 0.00074751, time used: 0.22
+TRAIN: Epoch 246, Average loss: 0.00290847, training samples shown: 251904, learning rate: 0.000025, time used: 196.73
+VAL: Epoch 246, Average loss: 0.00074586, time used: 0.23
+TRAIN: Epoch 247, Average loss: 0.00296793, training samples shown: 252928, learning rate: 0.000024, time used: 198.38
+VAL: Epoch 247, Average loss: 0.00075460, time used: 0.22
+TRAIN: Epoch 248, Average loss: 0.00309768, training samples shown: 253952, learning rate: 0.000024, time used: 193.84
+VAL: Epoch 248, Average loss: 0.00073633, time used: 0.23
+TRAIN: Epoch 249, Average loss: 0.00279987, training samples shown: 254976, learning rate: 0.000024, time used: 185.58
+VAL: Epoch 249, Average loss: 0.00075039, time used: 0.21
+TRAIN: Epoch 250, Average loss: 0.00283477, training samples shown: 256000, learning rate: 0.000023, time used: 182.78
+VAL: Epoch 250, Average loss: 0.00075114, time used: 0.21
+Optimization Finished!
+Best Val Loss: 0.0007243195941555314
