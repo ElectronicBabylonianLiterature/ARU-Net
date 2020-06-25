@@ -14,7 +14,7 @@ from pix_lab.util.exporter import Exporter_ckpt
 @click.option('--use_ema', default=True)
 def run(restore_ckt_path, export_name, use_ema):
     img_channels = 1
-    n_class = 2
+    n_class = 3
     model_kwargs = dict(model="aru", final_act="softmax")
     model = ARUnet(img_channels, n_class, model_kwargs=model_kwargs)
     exporter = Exporter_ckpt(model)

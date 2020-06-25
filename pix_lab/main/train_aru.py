@@ -18,7 +18,7 @@ def run(path_list_train, path_list_val, output_folder, restore_path):
     # Images have to be gray scale images
     img_channels = 1
     # Number of output classes
-    n_class = 2
+    n_class = 3
     kwargs_dat = dict(batchsize_tr=1, scale_min=0.2, scale_max=0.5, scale_val=0.33, affine_tr=True,
                       one_hot_encoding=True)
     data_provider = Data_provider_la(path_list_train, path_list_val, n_class, kwargs_dat=kwargs_dat)

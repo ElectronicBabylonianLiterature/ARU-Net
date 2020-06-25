@@ -26,7 +26,9 @@ class Inference_pb(object):
         if val_size is None:
             print("No Inference Data available. Skip Inference.")
             return
-        session_conf = tf.ConfigProto()
+        session_conf = tf.ConfigProto(device_count = {'GPU': 0})
+        #session_conf = tf.ConfigProto()
+        session_conf.gpu_options.allow_growth = True
         session_conf.gpu_options.visible_device_list = gpu_device
         with tf.Session(graph=self.graph, config=session_conf) as sess:
             x = self.graph.get_tensor_by_name('inImg:0')
