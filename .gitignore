@@ -1,3 +1,5 @@
 .idea
 model_checkpoints
 *.pyc
+predict
+model

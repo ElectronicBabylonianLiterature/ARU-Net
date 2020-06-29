@@ -9,7 +9,7 @@ from pix_lab.training.trainer import Trainer
 @click.command()
 @click.option('--path_list_train', default="/home/yunus/PycharmProjects/ARU-Net/train.lst")
 @click.option('--path_list_val', default="/home/yunus/PycharmProjects/ARU-Net/val.lst")
-@click.option('--output_folder', default="/home/yunus/PycharmProjects/ARU-Net/model_checkpoints")
+@click.option('--output_folder', default="/home/yunus/PycharmProjects/ARU-Net/model")
 @click.option('--restore_path', default=None)
 def run(path_list_train, path_list_val, output_folder, restore_path):
     # Since the input images are of arbitrarily size, the autotune will significantly slow down training!
@@ -29,7 +29,7 @@ def run(path_list_train, path_list_val, output_folder, restore_path):
     opt_kwargs = dict(optimizer="rmsprop", learning_rate=0.001)
     cost_kwargs = dict(cost_name="cross_entropy")
     trainer = Trainer(model,opt_kwargs=opt_kwargs, cost_kwargs=cost_kwargs)
-    trainer.train(data_provider, output_folder, restore_path, batch_steps_per_epoch=256, epochs=100, gpu_device="0")
+    trainer.train(data_provider, output_folder, restore_path, batch_steps_per_epoch=512, epochs=150, gpu_device="0")
 
 
 if __name__ == '__main__':

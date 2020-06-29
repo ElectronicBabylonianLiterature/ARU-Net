@@ -7,7 +7,7 @@ from pix_lab.util.util import read_image_list
 
 @click.command()
 @click.option('--path_list_imgs', default="/home/yunus/PycharmProjects/ARU-Net/predict/pred")
-@click.option('--path_net_pb', default="model_pb")
+@click.option('--path_net_pb', default="model_pb_")
 def run(path_list_imgs, path_net_pb):
     list_inf = read_image_list(path_list_imgs)
     inference = Inference_pb(path_net_pb, list_inf, mode='L')

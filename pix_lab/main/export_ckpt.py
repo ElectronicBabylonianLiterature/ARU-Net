@@ -9,8 +9,8 @@ from pix_lab.util.exporter import Exporter_ckpt
 
 
 @click.command()
-@click.option('--restore_ckt_path', default="/home/yunus/PycharmProjects/ARU-Net/model_checkpoints/model100")
-@click.option('--export_name', default="/home/yunus/PycharmProjects/ARU-Net/model_pb")
+@click.option('--restore_ckt_path', default="/home/yunus/PycharmProjects/ARU-Net/model/model150")
+@click.option('--export_name', default="/home/yunus/PycharmProjects/ARU-Net/model_pb_")
 @click.option('--use_ema', default=True)
 def run(restore_ckt_path, export_name, use_ema):
     img_channels = 1
